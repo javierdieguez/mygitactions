@@ -1,0 +1,34 @@
+ jobs:
+  build_frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building frontend"
+
+  build_backend:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Building backend"
+
+  test_frontend:
+    runs-on: ubuntu-latest
+    needs: [build_frontend]
+    steps:
+      - run: echo "Test the frontend"
+
+  test_backend:
+    runs-on: ubuntu-latest
+    needs: [build_backend]
+    steps:
+      - run: echo "Test the backend"
+
+  test_e2e:
+    runs-on: ubuntu-latest
+    needs: [build_frontend, build_backend]
+    steps:
+      - run: echo "Test the complete app"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [test_frontend, test_backend, test_e2e]
+    steps:
+      - run: echo "Deploy the validated app"
