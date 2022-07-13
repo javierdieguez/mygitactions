@@ -5,7 +5,7 @@ on:
     paths:
         - ".github/workflows/build.yaml"
        # - "src/**"
-        - "py/**"
+       # - "py/**"
 
 jobs:
   build:
