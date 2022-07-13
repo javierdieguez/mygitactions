@@ -36,7 +36,7 @@ env:
   ECR_REPOSITORY: my-ecr-repo           # set this to your Amazon ECR repository name
   ECS_SERVICE: nginx-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: my-cluster-name-test                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: https://us-east-2.console.aws.amazon.com/ecs/home?region=us-east-2#/taskDefinitions/first-run-task-definition/1 # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: nginx           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
